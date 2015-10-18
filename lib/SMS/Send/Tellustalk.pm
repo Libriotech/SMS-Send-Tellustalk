@@ -5,6 +5,7 @@ use warnings;
 our $VERSION = '0.01';
 use base 'SMS::Send::Driver';
 use MIME::Base64;
+use JSON;
 use Data::Dumper;
 
 sub new {
