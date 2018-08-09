@@ -28,7 +28,7 @@ sub send_sms {
 		sms_originator_source => "text",
 		sms_originator_text   => "$self->{_sender}"
 	};
-	my $response = _post($self, to_json($json_args));
+	my $response = _post($self, to_json($json_args, {utf8 => 1}));
 	if ($response->{status} eq "200") {
 		return 1;
 	}
